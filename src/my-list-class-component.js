@@ -16,32 +16,30 @@ export default class MyList extends FakeReact.Component {
   }
 
   render() {
-    const movieList = this.state.myList.map((value, index) => (
-      <span key={index}>{value}</span>
-    ));
-    console.log(movieList);
     return (
-      <div id="movie-list">
-        <input
-          type="text"
-          value={this.state.currentMovie}
-          placeholder="Type Movies here! Now!"
-          onChange={e => {
-            this.setState({ currentMovie: e.target.value });
-          }}
-        />
-        <button
-          onClick={() => {
-            this.setState({
-              myList: [...this.state.myList, this.state.currentMovie],
-              count: this.state.count + 1
-            });
-          }}
-        >
-          Add
-        </button>
-        <div>{movieList.forEach(element => element)}</div>
-        <small>
+      <div>
+        <div id="movie-list">
+          <input
+            type="text"
+            value={this.state.currentMovie}
+            placeholder="Type Movies here! Now!"
+            onChange={e => {
+              this.setState({ currentMovie: e.target.value });
+            }}
+          />
+          <button
+            onClick={() => {
+              this.setState({
+                myList: [...this.state.myList, this.state.currentMovie],
+                count: this.state.count + 1
+              });
+            }}
+          >
+            Add
+          </button>
+        </div>
+        <div className="list">{this.state.myList.join(",")}</div>
+        <small className="count">
           Movie count: <bold>{this.state.count}</bold>
         </small>
       </div>

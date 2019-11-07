@@ -6,14 +6,20 @@ import MyList from "./my-list-class-component";
 import "./styles/main.scss";
 
 const Force = ({ name }) => {
-  return <h5>{`May the force be with you!, ${name}`}</h5>;
+  return (
+    <span className={"header"}>
+      {`May the force be with you!, ${name} `}
+      <sup>I'm a functional component</sup>
+    </span>
+  );
 };
 
 const App = (
   <div>
     <h1 className="primary">My own React</h1>
-    Go and see these movies to survive!! <Force name="Ren" />
-    <hr />
+    <Force name="Bala" />
+    <hr className="small-width" />
+    <span className="movie-header">Good to watch, these movies are</span>
     <MyList />
   </div>
 );

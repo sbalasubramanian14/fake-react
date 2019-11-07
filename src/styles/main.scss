@@ -1,5 +1,73 @@
-$bg: rgb(168, 168, 247);
+$color-txt: rgb(229, 229, 247);
 
 body {
-  background: $bg;
+  background: url("https://free4kwallpapers.com/uploads/wallpaper/itachi-wallpaper-1024x768-wallpaper.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-txt;
+  text-align: center;
+}
+
+.small-width {
+  width: 35%;
+}
+
+.header {
+  font-size: 25px;
+  font-weight: 500px;
+
+  sup {
+    font-size: 11px;
+  }
+}
+
+.movie-header {
+  padding-top: 25px;
+}
+
+#movie-list {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+
+  input {
+    display: block;
+    margin: 0;
+    padding: 10px 15px;
+    color: black;
+    width: 90%;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: inherit;
+    line-height: 15px;
+    border: none;
+    border-radius: 0.4rem;
+    transition: box-shadow 250ms;
+  }
+
+  button {
+    padding: 10px 20px;
+    border-radius: 15%;
+    margin-left: 15px;
+    margin-right: 30px;
+  }
+
+  button:hover {
+    background: white;
+  }
+}
+
+.list {
+  margin-top: 2rem;
+  font-size: 40px;
+  color: rgb(98, 236, 98);
+  font-weight: 400;
+}
+
+.count {
+  margin-top: 2rem;
+  font-size: 15px;
 }

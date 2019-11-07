@@ -25,16 +25,15 @@ const createElement = (type, props = {}, ...children) => {
 
   // This is to seperate out the text attributes and event listener attributes
   for (let propKey in props) {
-    // event props always startwith on eg. onClick, onDblClick etc.
     if (propKey.startsWith("on")) {
-      // onClick -> click
       const event = propKey.substring(2).toLowerCase();
 
       eventProps[event] = props[propKey];
     } else {
-      dataProps[propKey] = propKey[propKey];
+      dataProps[propKey] = props[propKey];
     }
   }
+  console.log(dataProps);
   return h(type, { props: dataProps, on: eventProps }, children);
 };
 
