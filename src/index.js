@@ -1,6 +1,8 @@
 import FakeReact from "./fake-react";
 import FakeReactDom from "./fake-react-dom";
 
+import MyList from "./my-list-class-component";
+
 import "./styles/main.scss";
 
 const Force = ({ name }) => {
@@ -12,6 +14,7 @@ const App = (
     <h1 className="primary">My own React</h1>
     Go and see these movies to survive!! <Force name="Ren" />
     <hr />
+    <MyList />
   </div>
 );
 
