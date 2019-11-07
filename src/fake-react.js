@@ -3,6 +3,7 @@ import { h } from "snabbdom";
 const createElement = (type, props = {}, ...children) => {
   console.log(type, props, children);
 
+  children = children.flat();
   if (type.prototype && type.prototype.isClassComponent) {
     const componentInstance = new type(props);
     componentInstance._virtualNode = componentInstance.render();

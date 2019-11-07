@@ -38,7 +38,11 @@ export default class MyList extends FakeReact.Component {
             Add
           </button>
         </div>
-        <div className="list">{this.state.myList.join(",")}</div>
+        <ul className="list">
+          {this.state.myList.map(elem => (
+            <li>{elem}</li>
+          ))}
+        </ul>
         <small className="count">
           Movie count: <bold>{this.state.count}</bold>
         </small>
