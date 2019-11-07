@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "FakeReact.createElement",
+        "throwIfNamespace": false
+      }
+    ]
+  ]
+}
